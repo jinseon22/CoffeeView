@@ -46,6 +46,7 @@ local.properties
 
 # STS (Spring Tool Suite)
 .springBeans
+.factorypath
 
 # Code Recommenders
 .recommenders/
@@ -93,11 +94,26 @@ local.properties
 hs_err_pid*
 replay_pid*
 
-# Properties Files, etc
-application.properties
+### Maven ###
 target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse m2e generated files
+# Eclipse Core
 .project
+# JDT-specific (Eclipse Java Development Tools)
 .classpath
-.settings
+
+# Properties Files
+application.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,java

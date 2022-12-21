@@ -1,0 +1,706 @@
+/* 
+1. font, common
+2. header
+3. footer
+4. index
+
+5. user
+	5-1. login
+	5-2. join
+	5-3. joinSubmit
+	
+6. coffee (순위)
+	6-1. category
+	6-2. list
+	6-3. detail
+	6-4. review
+*/
+
+/************************* 1. font, common *************************/
+@import
+	url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap")
+	;
+
+* {
+	/* border: 1px solid gray; */
+	box-sizing: border-box;
+	font-family: "Gowun Batang", serif;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+
+/************************* 2. header *************************/
+/* 상단 메뉴 */
+.header-top-container ul {
+	background-color: #f7f3ec;
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	justify-content: flex-end;
+}
+
+.header-top-container ul a {
+	text-decoration: none;
+	color: #000000;
+	font-size: 140%;
+}
+
+.header-top-container ul li {
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.header-top-container ul li:last-child {
+	margin-right: 5%;
+}
+
+.header-logout-a {
+	cursor: pointer;
+}
+
+/* 메인 메뉴 */
+.header-main-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 2%;
+	margin-left: 5%;
+	margin-bottom: 2%;
+}
+
+.header-logo-wrapper {
+	width: 15%;
+	display: flex;
+	align-items: center;
+}
+
+.header-logo {
+	width: 100%;
+	height: auto;
+	display: flex;
+}
+
+.header-main-container nav {
+	margin-left: 25%;
+	width: 55%;
+}
+
+.header-main-ul {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	justify-content: flex;
+}
+
+.header-main-ul li {
+	padding-right: 10%;
+}
+
+.header-main-ul a {
+	text-decoration: none;
+	color: #4f332e;
+	font-size: 250%;
+	white-space: nowrap;
+	font-weight: 600;
+}
+
+.header-bottom-hr {
+	height: 1px;
+	background-color: #bdb3ac;
+	border: 0;
+}
+
+/************************* 3. footer *************************/
+.footer-container {
+	margin-top: 10%;
+	height: fit-content;
+	position: relative;
+}
+
+.footer-background-img {
+	width: 100%;
+	display: block;
+	opacity: 80%;
+}
+
+.footer-main-container {
+	text-align: center;
+	position: absolute;
+	top: 19%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	font-size: 110%;
+}
+
+.footer-main-title {
+	font-weight: 600;
+	font-size: 170%;
+	margin-bottom: 5px;
+}
+
+.footer-main-description {
+	margin-bottom: 4%;
+}
+
+/************************* 4. index *************************/
+/* 이미지 슬라이더 */
+.image-slider-wrapper {
+	text-align: center;
+}
+
+.image-slider-wrapper img {
+	width: 100%;
+}
+
+/* 최고의 커피 */
+.best-coffee-section {
+	margin-top: 5%;
+}
+
+.index-label-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2.5%;
+}
+
+.index-label-hr {
+	border: 0;
+	background-color: #705b4a;
+	height: 1px;
+	width: 14%;
+}
+
+.index-label-span {
+	font-size: 300%;
+	margin: 0% 4% 0% 4%;
+	color: #705b4a;
+}
+
+/* 새로운 커피 */
+.new-coffee-section {
+	margin-top: 4%;
+}
+
+/* 커피 리스트는 6. coffee 참고 */
+
+/************************* 5. user *************************/
+/************************* 5-1. login *************************/
+.login-section {
+	margin-top: 7%;
+}
+
+.login-container * {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-label {
+	font-size: 300%;
+	margin-bottom: 1.5%;
+}
+
+.login-input-wrapper {
+	margin-top: 1.3%;
+}
+
+.login-input-wrapper input {
+	width: 130%;
+	height: 60px;
+	font-size: 200%;
+}
+
+.login-check-text {
+	font-size: 130%;
+	margin-top: 0.6%;
+	color: red;
+	visibility: hidden;
+}
+
+.login-button-wrapper {
+	margin: 1%;
+	font-size: 150%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 13%;
+}
+
+.login-button-wrapper button {
+	width: 100%;
+	height: 50px;
+	font-size: 130%;
+}
+
+.login-menu-container {
+	margin: 1%;
+	font-size: 150%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.login-menu-container a {
+	text-decoration: none;
+	color: #000000;
+}
+
+/************************* 5-2. join *************************/
+#join-section {
+	margin-top: 7%;
+}
+
+#join-section * {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#join-label {
+	font-size: 300%;
+}
+
+.join-input-container {
+	margin-top: 1.3%;
+}
+
+.join-input-container label {
+	font-size: 160%;
+}
+
+.join-input-container input {
+	width: 120%;
+	height: 50px;
+	font-size: 200%;
+}
+
+#join-email-container {
+	width: 100%;
+}
+
+#join-email-wrapper {
+	flex-direction: row;
+	width: 40%;
+}
+
+#join-email-container input {
+	margin-left: 21%;
+	margin-right: 1%;
+	width: 120%;
+	min-width: 429.6px;
+}
+
+#join-email-container button {
+	font-size: 130%;
+	width: 40%;
+	min-width: 85px;
+}
+
+.join-check-text {
+	font-size: 130%;
+}
+
+#email-text-true {
+	color: #009b00;
+	display: none;
+}
+
+#email-text-false {
+	color: red;
+	display: none;
+}
+
+#emailCode-disabled {
+	background-color: #e5e5e5;
+}
+
+#emailCode-abled {
+	background-color: white;
+}
+
+#emailCode-text-true {
+	color: #009b00;
+	display: none;
+}
+
+#emailCode-text-false {
+	color: red;
+	display: none;
+}
+
+#password-check-text-true {
+	color: #009b00;
+	display: none;
+}
+
+#password-check-text-false {
+	color: red;
+	display: none;
+}
+
+#nickname-text-true {
+	color: #009b00;
+	display: none;
+}
+
+#nickname-text-false {
+	color: red;
+	display: none;
+}
+
+#join-submit-button {
+	width: 300%;
+	height: 50px;
+	font-size: 160%;
+	margin-top: 55%;
+}
+
+/************************* 5-3. joinSubmit *************************/
+#joinSubmit-container {
+	margin-top: 9%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 150%;
+}
+
+#joinSubmit-label {
+	font-size: 200%;
+	margin-bottom: 0.8%;
+}
+
+#joinSubmit-main-button-wrapper {
+	margin-top: 2.5%;
+}
+
+#joinSubmit-main-button-wrapper button {
+	background-color: #956D45;
+	color: white;
+	border: none;
+	text-decoration: none;
+	font-size: 120%;
+	padding: 8px 22px 8px 22px;
+	margin-top: 1%;
+	cursor: pointer;
+}
+
+/************************* 6. coffee *************************/
+/************************* 6-1. category *************************/
+.coffee-category-container {
+	position: relative;
+	border: 1px solid #bdb3ac;
+	margin: 5% 16% 5% 16%;
+	padding: 30px 50px 30px 50px;
+	border: 1px solid #bdb3ac;
+}
+
+.coffee-category-title p {
+	font-size: 170%;
+	font-weight: bold;
+}
+
+/* toggle */
+.coffee-category-toggle-wrapper {
+	position: absolute;
+	right: 50px;
+	top: 30px;
+	cursor: pointer;
+}
+
+.coffee-category-toggle-content-container {
+	border-top: 1px solid #bdb3ac;
+	padding-top: 20px;
+	margin-top: 30px;
+}
+
+/* category list */
+.coffee-category-ul {
+	font-size: 140%;
+	list-style: none;
+	margin: 1px;
+}
+
+.coffee-category-ul li {
+	display: inline-block;
+	margin: 0px 20px 5px 0px;
+	width: 160px;
+}
+
+.coffee-category-ul li input[type=checkbox] {
+	zoom: 1.5;
+	margin-right: 5px;
+	accent-color: #956D45;
+}
+
+.coffee-category-container-for-border {
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #bdb3ac;
+}
+
+/************************* 6-2. list *************************/
+.coffee-list-container {
+	margin: 2% 16% 2% 16%;
+}
+
+.coffee-ul {
+	width: 100%;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.coffee-ul li {
+	margin: 0px 4.4% 25px 0px;
+}
+
+.coffee-ul li:nth-child(4n) {
+	margin-right: 0px;
+}
+
+.coffee-list-item-container {
+	cursor: pointer;
+}
+
+.coffee-list-img-wrapper {
+	text-align: center;
+	background: #f7f3ec;
+	width: 280px;
+	height: 360px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.coffee-list-img-wrapper img {
+	border-radius: 10px;
+}
+
+.coffee-list-brand {
+	text-align: center;
+	font-weight: 600;
+	font-size: 150%;
+}
+
+.coffee-list-name {
+	width: 280px;
+	text-align: center;
+	font-size: 150%;
+}
+
+/* paging */
+.coffee-list-paging-container {
+	margin-top: 4%;
+	display: flex;
+	justify-content: center;
+}
+
+.coffee-list-paging-container ul {
+	font-size: 150%;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.coffee-list-paging-container ul li a {
+	padding: 0px 13px 0px 13px;
+	margin: 0px 1.5px 0px 1.5px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.coffee-list-paging-a-clicked {
+	background-color: #956D45;
+	color: white !important;
+	border-radius: 5px;
+}
+
+/************************* 6-3. detail *************************/
+.coffee-detail-section {
+	margin: 5% 22% 5% 22%;
+}
+
+.coffee-detail-container {
+	display: flex;
+}
+
+.coffee-detail-img-wrapper {
+	margin-top: 8px;
+	background: #f7f3ec;
+	width: 280px;
+	height: 360px;
+	border-radius: 10px;
+}
+
+.coffee-detail-img-wrapper img {
+	border-radius: 10px;
+}
+
+.coffee-detail-info-container {
+	margin: 0% 0% 0% 7%;
+	font-size: 145%;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+}
+
+.coffee-detail-title-container {
+	border-bottom: 1px solid #bdb3ac;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+
+.coffee-detail-title-kr {
+	font-size: 180%;
+}
+
+.coffee-detail-title-eng {
+	font-size: 120%;
+	color: #6d6d6d;
+}
+
+.coffee-detail-table-wrapper table th, td {
+	padding-bottom: 10px;
+	vertical-align: top;
+}
+
+.coffee-detail-table-wrapper table tr th {
+	width: 100px;
+	color: #956D45;
+	text-align: start;
+}
+
+/************************* 6-4. review *************************/
+.review-container {
+	margin: 2% 22% 0% 22%;
+}
+
+.review-top-container {
+	display: flex;
+	align-items: flex-end;
+	border-bottom: 1px solid #BDB3AC;
+	padding-bottom: 5%;
+	margin-bottom: 5%;
+}
+
+.review-logo {
+	color: white;
+	background-color: #956D45;
+	font-size: 270%;
+	border-radius: 5px;
+	width: 13%;
+	text-align: center;
+	margin-right: auto;
+}
+
+.review-top-container span input[type=radio] {
+	display: none;
+}
+
+.review-top-container span input[type=radio]+label {
+	font-size: 150%;
+	display: inline-block;
+	cursor: pointer;
+	border: 1px solid #BDB3AC;
+	text-align: center;
+	color: #956D45;
+	width: 125px;
+	height: 40px;
+}
+
+#new[type=radio]+label {
+	border-right: none;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#like[type=radio]+label {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.review-top-container span input[type=radio]:checked+label {
+	background-color: #956D45;
+	color: white;
+}
+
+.review-one-container {
+	font-size: 140%;
+	margin: 0% 1% 5% 1%;
+	padding-bottom: 5%;
+	border-bottom: 1px solid #BDB3AC;
+}
+
+.review-user-container {
+	display: flex;
+}
+
+.review-user-info-container {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	margin-left: 25px;
+}
+
+.review-user-info-wrapper {
+	margin: 7px 0px 5px 0px;
+	display: flex;
+}
+
+.review-user-nickname {
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+.review-user-grade {
+	background-color: #f7f3ec;
+	color: #FF7575;
+	border-radius: 5px;
+	padding: 2px 8px 2px 8px;
+	text-align: center;
+}
+
+.review-user-regdate {
+	margin-left: auto;
+}
+
+.review-content {
+	margin: 2% 1% 2% 1%;
+}
+
+.review-recommendation-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.review-recommendation {
+	display: flex;
+	background-color: #f7f3ec;
+	border-radius: 22px;
+	align-items: center;
+	justify-content: center;
+	padding: 7px 18px 7px 18px;
+	margin-right: 2%;
+}
+
+.review-recommendation img {
+	width: 30px;
+	margin-right: 10px;
+}

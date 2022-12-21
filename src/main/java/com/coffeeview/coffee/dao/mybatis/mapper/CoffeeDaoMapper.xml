@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coffeeview.coffee.dao.CoffeeDao">
+
+	<select id="getBestCoffee"
+		resultType="com.coffeeview.coffee.entity.CoffeeListView">
+		select id, name, thumbnail, rate, brand_kr, brand_eng
+		from
+		coffeelistview
+		order by
+		rate desc limit 4;
+	</select>
+
+	<select id="getNewCoffee" resultType="com.coffeeview.coffee.entity.CoffeeListView">
+		select id, name, thumbnail, rate, brand_kr,
+		brand_eng
+		from coffeelistview
+		order by id desc limit 4;
+	</select>
+
+	<select id="getAllCoffee" resultType="com.coffeeview.coffee.entity.CoffeeListView">
+		select id, name, thumbnail, rate, brand_kr,
+		brand_eng
+		from coffeelistview
+		order by id asc limit #{skip}, #{amount};
+	</select>
+
+	<select id="getTotalCoffee" resultType="int">
+		select count(*) from coffee;
+	</select>
+	
+		<select id="getOneCoffee" resultType="com.coffeeview.coffee.entity.CoffeeDetailView">
+		select *
+		from coffeedetailview
+		where id=#{id};
+	</select>
+
+</mapper>
