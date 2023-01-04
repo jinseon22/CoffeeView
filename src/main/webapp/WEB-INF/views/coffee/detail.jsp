@@ -28,10 +28,7 @@
 					</tr>
 					<tr>
 						<th scope="row">후기</th>
-						<td id="score">
-							<!-- <fmt:formatNumber value="${score_avg}" pattern=".0" /> --> ${score_avg}/5
-							(${review_count}개)
-						</td>
+						<td id="score">${score_avg}/5 (${review_count}개)</td>
 					</tr>
 					<tr>
 						<th scope="row">카테고리</th>
@@ -99,4 +96,8 @@
 </section>
 <script>
 	
+	// 후기 작성하기
+	$(".review-write-button button").click(function(){
+		location.href="${pageContext.request.contextPath}/coffee/review-write"
+	});
 </script>

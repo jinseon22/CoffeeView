@@ -50,5 +50,11 @@ public class CoffeeController {
         
         return "coffee.detail";
     }
+    
+    // 커피 후기 작성
+    @GetMapping("review-write")
+    public String review_write(){
+        return "coffee.review-write";
+    }
 
 }

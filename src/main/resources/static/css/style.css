@@ -464,7 +464,7 @@ html, body {
 }
 
 .coffee-ul li {
-	margin: 0px 4.4% 25px 0px;
+	margin: 0px 4.4% 5% 0px;
 }
 
 .coffee-ul li:nth-child(4n) {
@@ -505,7 +505,7 @@ html, body {
 
 /* paging */
 .coffee-list-paging-container {
-	margin-top: 4%;
+	margin-top: 2%;
 	display: flex;
 	justify-content: center;
 }
