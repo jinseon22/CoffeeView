@@ -8,7 +8,7 @@ public class Coffee {
     private int category1;
     private int category2;
     private int brand;
-    private double rate;
+    private double score_avg;
     private String description;
     private String thumbnail;
 
@@ -16,7 +16,7 @@ public class Coffee {
     }
 
     public Coffee(int id, String name_kr, String name_eng, int category1, int category2,
-            int brand, double rate, String description, String thumbnail) {
+            int brand, double score_avg, String description, String thumbnail) {
         super();
         this.id = id;
         this.name_kr = name_kr;
@@ -24,7 +24,7 @@ public class Coffee {
         this.category1 = category1;
         this.category2 = category2;
         this.brand = brand;
-        this.rate = rate;
+        this.score_avg = score_avg;
         this.description = description;
         this.thumbnail = thumbnail;
     }
@@ -77,12 +77,12 @@ public class Coffee {
         this.brand = brand;
     }
 
-    public double getRate() {
-        return rate;
+    public double getScore_avg() {
+        return score_avg;
     }
 
-    public void setRate(double rate) {
-        this.rate = rate;
+    public void setScore_avg(double score_avg) {
+        this.score_avg = score_avg;
     }
 
     public String getDescription() {
@@ -105,7 +105,7 @@ public class Coffee {
     public String toString() {
         return "Coffee [id=" + id + ", name_kr=" + name_kr + ", name_eng=" + name_eng
                 + ", category1=" + category1 + ", category2=" + category2 + ", brand="
-                + brand + ", rate=" + rate + ", description=" + description
+                + brand + ", score_avg=" + score_avg + ", description=" + description
                 + ", thumbnail=" + thumbnail + "]";
     }
 

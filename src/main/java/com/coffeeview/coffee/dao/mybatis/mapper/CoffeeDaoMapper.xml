@@ -6,22 +6,22 @@
 
 	<select id="getBestCoffee"
 		resultType="com.coffeeview.coffee.entity.CoffeeListView">
-		select id, name, thumbnail, rate, brand_kr, brand_eng
+		select id, name, thumbnail, score_avg, brand_kr, brand_eng
 		from
 		coffeelistview
 		order by
-		rate desc limit 4;
+		score_avg desc limit 4;
 	</select>
 
 	<select id="getNewCoffee" resultType="com.coffeeview.coffee.entity.CoffeeListView">
-		select id, name, thumbnail, rate, brand_kr,
+		select id, name, thumbnail, score_avg, brand_kr,
 		brand_eng
 		from coffeelistview
 		order by id desc limit 4;
 	</select>
 
 	<select id="getAllCoffee" resultType="com.coffeeview.coffee.entity.CoffeeListView">
-		select id, name, thumbnail, rate, brand_kr,
+		select id, name, thumbnail, score_avg, brand_kr,
 		brand_eng
 		from coffeelistview
 		order by id asc limit #{skip}, #{amount};

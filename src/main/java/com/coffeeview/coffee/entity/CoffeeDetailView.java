@@ -1,7 +1,7 @@
 package com.coffeeview.coffee.entity;
 
 public class CoffeeDetailView {
-    
+
     private int id;
     private String name_kr;
     private String name_eng;
@@ -10,13 +10,33 @@ public class CoffeeDetailView {
     private String category3;
     private boolean is_coldbrew;
     private boolean is_decaf;
-    private double rate;
+    private double score_avg;
     private String description;
     private String thumbnail;
     private String brand_kr;
     private String brand_eng;
 
     public CoffeeDetailView() {
+    }
+
+    public CoffeeDetailView(int id, String name_kr, String name_eng, String category1,
+            String category2, String category3, boolean is_coldbrew, boolean is_decaf,
+            double score_avg, String description, String thumbnail, String brand_kr,
+            String brand_eng) {
+        super();
+        this.id = id;
+        this.name_kr = name_kr;
+        this.name_eng = name_eng;
+        this.category1 = category1;
+        this.category2 = category2;
+        this.category3 = category3;
+        this.is_coldbrew = is_coldbrew;
+        this.is_decaf = is_decaf;
+        this.score_avg = score_avg;
+        this.description = description;
+        this.thumbnail = thumbnail;
+        this.brand_kr = brand_kr;
+        this.brand_eng = brand_eng;
     }
 
     public int getId() {
@@ -83,12 +103,12 @@ public class CoffeeDetailView {
         this.is_decaf = is_decaf;
     }
 
-    public double getRate() {
-        return rate;
+    public double getScore_avg() {
+        return score_avg;
     }
 
-    public void setRate(double rate) {
-        this.rate = rate;
+    public void setScore_avg(double score_avg) {
+        this.score_avg = score_avg;
     }
 
     public String getDescription() {
@@ -128,7 +148,7 @@ public class CoffeeDetailView {
         return "CoffeeDetailView [id=" + id + ", name_kr=" + name_kr + ", name_eng="
                 + name_eng + ", category1=" + category1 + ", category2=" + category2
                 + ", category3=" + category3 + ", is_coldbrew=" + is_coldbrew
-                + ", is_decaf=" + is_decaf + ", rate=" + rate + ", description="
+                + ", is_decaf=" + is_decaf + ", score_avg=" + score_avg + ", description="
                 + description + ", thumbnail=" + thumbnail + ", brand_kr=" + brand_kr
                 + ", brand_eng=" + brand_eng + "]";
     }

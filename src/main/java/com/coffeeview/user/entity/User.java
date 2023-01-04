@@ -9,21 +9,21 @@ public class User {
     private String password;
     private String nickname;
     private int grade;
-    private Date create_time;
+    private Date regdate;
     private boolean is_admin;
 
     public User() {
     }
 
     public User(int id, String email, String password, String nickname, int grade,
-            Date create_time, boolean is_admin) {
+            Date regdate, boolean is_admin) {
         super();
         this.id = id;
         this.email = email;
         this.password = password;
         this.nickname = nickname;
         this.grade = grade;
-        this.create_time = create_time;
+        this.regdate = regdate;
         this.is_admin = is_admin;
     }
 
@@ -67,12 +67,12 @@ public class User {
         this.grade = grade;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getRegdate() {
+        return regdate;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setRegdate(Date regdate) {
+        this.regdate = regdate;
     }
 
     public boolean isIs_admin() {
@@ -86,8 +86,8 @@ public class User {
     @Override
     public String toString() {
         return "User [id=" + id + ", email=" + email + ", password=" + password
-                + ", nickname=" + nickname + ", grade=" + grade + ", create_time="
-                + create_time + ", is_admin=" + is_admin + "]";
+                + ", nickname=" + nickname + ", grade=" + grade + ", regdate="
+                + regdate + ", is_admin=" + is_admin + "]";
     }
 
 }
