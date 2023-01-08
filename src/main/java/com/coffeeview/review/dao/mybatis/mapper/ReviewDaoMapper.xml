@@ -18,7 +18,12 @@
 	</select>
 
 	<select id="getReviewScore" resultType="Double">
-		select avg(score) from review where coffee_id=#{coffee_id};
+		select avg(score) from review where
+		coffee_id=#{coffee_id};
 	</select>
 
+	<insert id="writeReview" parameterType="com.coffeeview.review.entity.Review">
+		insert into review (coffee_id, user_id, content, score) VALUES (#{coffee_id}, #{user_id},
+		#{content}, #{score});
+	</insert>
 </mapper>

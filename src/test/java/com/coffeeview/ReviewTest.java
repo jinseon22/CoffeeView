@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.coffeeview.review.entity.Review;
 import com.coffeeview.review.entity.ReviewView;
 import com.coffeeview.review.service.ReviewService;
 import com.coffeeview.user.controller.UserController;
@@ -32,5 +33,15 @@ public class ReviewTest {
     void getReviewScore() {
         double score = service.getReviewScore(2);
         logger.info("" + score);
+    }
+
+    @Test
+    void writeReview() {
+        Review r = new Review();
+        r.setCoffee_id(1);
+        r.setUser_id(11);
+        r.setContent("test review");
+        r.setScore(5);
+        service.writeReview(r);
     }
 }

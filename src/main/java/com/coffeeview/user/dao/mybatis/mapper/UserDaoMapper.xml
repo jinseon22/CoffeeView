@@ -10,9 +10,10 @@
 	</insert>
 
 	<select id="login" resultType="com.coffeeview.user.entity.User">
-		select email, password, nickname, grade, is_admin
+		select *
 		from user
-		where email=#{email} and password=#{password}
+		where email=#{email} and
+		password=#{password}
 	</select>
 
 	<select id="emailCheck" resultType="int">
