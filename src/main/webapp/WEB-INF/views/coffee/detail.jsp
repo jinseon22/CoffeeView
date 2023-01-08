@@ -27,8 +27,8 @@
 						<td>${coffee.description}</td>
 					</tr>
 					<tr>
-						<th scope="row">후기</th>
-						<td id="score">${score_avg}/5 (${review_count}개)</td>
+						<th scope="row">리뷰</th>
+						<td id="score">${score_avg}/5(${review_count}개)</td>
 					</tr>
 					<tr>
 						<th scope="row">카테고리</th>
@@ -45,9 +45,9 @@
 
 	<div class="review-container">
 
-		<!-- 후기 로고, 순서 정렬 -->
+		<!-- 리뷰 로고, 순서 정렬 -->
 		<div class="review-top-container">
-			<span class="review-logo">후기</span>
+			<span class="review-logo">리뷰</span>
 			<span class="review-radio-wrapper">
 				<input type="radio" id="new" name="order">
 				<label for="new">최신 순</label>
@@ -58,7 +58,7 @@
 			</span>
 		</div>
 
-		<!-- 각각의 후기 -->
+		<!-- 각각의 리뷰 -->
 		<c:forEach items="${coffeeReview}" var="review">
 			<div class="review-one-container">
 				<div class="review-user-container">
@@ -88,16 +88,24 @@
 			</div>
 		</c:forEach>
 
-	</div>
-
-	<div class="review-write-button">
-		<button type="button">작성하기 ></button>
+		<div class="review-write-button">
+			<button type="button">작성하기 ></button>
+		</div>
 	</div>
 </section>
+
 <script>
-	
-	// 후기 작성하기
-	$(".review-write-button button").click(function(){
-		location.href="${pageContext.request.contextPath}/coffee/review-write"
-	});
+	// 로그인 된 경우만 리뷰 작성 가능
+	$(".review-write-button button")
+			.click(
+					function() {
+						var loginUserId = '<c:out value="${loginUser.id}"/>';
+
+						if (loginUserId > 0) {
+							location.href = "${pageContext.request.contextPath}/coffee/review/write?id=${coffee.id}";
+
+						} else {
+							location.href = "${pageContext.request.contextPath}/user/login";
+						}
+					});
 </script>

@@ -40,7 +40,7 @@
 			<ul class="header-main-ul">
 				<li><a href="">커피뷰</a></li>
 				<li><a href="${pageContext.request.contextPath}/coffee/list">순위</a></li>
-				<li><a href="">후기</a></li>
+				<li><a href="">리뷰</a></li>
 				<li><a href="">이야기</a></li>
 				<li><a href="">검색</a></li>
 			</ul>

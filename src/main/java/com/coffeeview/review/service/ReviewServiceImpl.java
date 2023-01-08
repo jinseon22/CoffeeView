@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.coffeeview.review.dao.ReviewDao;
+import com.coffeeview.review.entity.Review;
 import com.coffeeview.review.entity.ReviewView;
 
 @Service
@@ -27,6 +28,11 @@ public class ReviewServiceImpl implements ReviewService{
     @Override
     public Double getReviewScore(int coffee_id) {
         return reviewDao.getReviewScore(coffee_id);
+    }
+
+    @Override
+    public void writeReview(Review review) {
+        reviewDao.writeReview(review);
     }
 
 }

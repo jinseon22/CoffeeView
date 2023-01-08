@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.coffeeview.review.entity.Review;
 import com.coffeeview.review.entity.ReviewView;
 
 @Repository
@@ -31,6 +32,11 @@ public class MybatisReviewDao implements ReviewDao {
     @Override
     public Double getReviewScore(int coffee_id) {
         return mapper.getReviewScore(coffee_id);
+    }
+
+    @Override
+    public void writeReview(Review review) {
+        mapper.writeReview(review);
     }
 
 }

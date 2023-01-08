@@ -58,9 +58,9 @@
 								높은 순</label></li>
 						<li><input type="checkbox" id="rate-low"><label for="rate-low">평점
 								낮은 순</label></li>
-						<li><input type="checkbox" id="review-many"><label for="review-many">후기
+						<li><input type="checkbox" id="review-many"><label for="review-many">리뷰
 								많은 순</label></li>
-						<li><input type="checkbox" id="review-few"><label for="review-few">후기
+						<li><input type="checkbox" id="review-few"><label for="review-few">리뷰
 								적은 순</label></li>
 					</ul>
 				</div>

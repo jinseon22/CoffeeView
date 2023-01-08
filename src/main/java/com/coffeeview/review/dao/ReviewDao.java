@@ -2,6 +2,7 @@ package com.coffeeview.review.dao;
 
 import java.util.List;
 
+import com.coffeeview.review.entity.Review;
 import com.coffeeview.review.entity.ReviewView;
 
 public interface ReviewDao {
@@ -11,5 +12,7 @@ public interface ReviewDao {
     public int getReviewCount(int coffee_id); // 커피별 리뷰 개수
     
     public Double getReviewScore(int coffee_id); // 커피별 리뷰 평점
+    
+    public void writeReview(Review review); // 리뷰 작성
 
 }

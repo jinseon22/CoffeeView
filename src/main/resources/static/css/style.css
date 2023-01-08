@@ -14,6 +14,7 @@
 	6-2. list
 	6-3. detail
 	6-4. review
+	6-5. review write
 */
 
 /************************* 1. font, common *************************/
@@ -705,12 +706,52 @@ html, body {
 	margin-right: 10px;
 }
 
-.review-write-button button{
+.review-write-button button {
 	font-size: 145%;
-	margin-left: 71%;
+	font-weight: bold;
+	margin-left: 90%;
 	cursor: pointer;
 	border: none;
 	text-decoration: none;
 	background: none;
 	color: #956D45;
+	min-width: 109px;
+}
+
+/************************* 6-5. review write *************************/
+.review-score-wrapper {
+	display: flex;
+	align-items: center;
+	margin-left: 2%;
+	margin-bottom: 3%;
+	font-size: 130%;
+    color: #956D45;
+    font-weight: bold;
+}
+
+.review-textarea-wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+
+.review-textarea-wrapper textarea {
+	border: 1px solid #BDB3AC;
+	outline: none;
+	resize: none;
+	width: 96%;
+	height: 250px;
+	font-size: 150%;
+	margin-bottom: 4%;
+}
+
+.review-score-wrapper input[type=radio] {
+	display: none;
+}
+
+.review-score-wrapper label {
+	cursor: pointer;
+}
+
+.review-score-text {
+	margin-left: 1.3%;
 }
